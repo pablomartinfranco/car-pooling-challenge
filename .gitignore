@@ -1,0 +1,19 @@
+# macOS
+**/.DS_Store
+
+# IDE
+.idea/*
+.vscode/*
+
+# Dev build
+build/
+tmp/
+bin/
+
+# Test
+.ignore*
+*.out
+__debug*
+
+# Environment variables
+# .env.conf

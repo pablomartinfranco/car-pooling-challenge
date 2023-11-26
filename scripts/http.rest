@@ -1,0 +1,39 @@
+### Get Status  
+GET http://localhost:9091/status
+
+### Register Cars  
+PUT http://localhost:9091/cars
+content-type: application/json
+
+[
+  {
+    "id": 1,
+    "seats": 4
+  },
+  {
+    "id": 2,
+    "seats": 6
+  }
+]
+
+### Anounce group of people  
+POST http://localhost:9091/journey
+content-type: application/json
+
+{
+  "id": 1,
+  "people": 4
+}
+
+### Dropoff group of people
+POST http://localhost:9091/dropoff
+content-type: application/x-www-form-urlencoded
+
+ID=0
+
+### Locate group of people
+POST http://localhost:9091/locate
+accept: application/json
+content-type: application/x-www-form-urlencoded
+
+ID=1
