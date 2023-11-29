@@ -166,7 +166,7 @@ This way the solution lets you test and try different worker amount combination 
 
 - Day 4 to 8, implementation of a first aproach solution, starting from the use cases guided with integration tests, and coding the domain abstractions satisfying those tests.
 
-- By day 8 I've got a working implementation although with some race condition issues when spawning to many workers for the domain components.
+- By day 8 I've got a working implementation although with some race condition issues when spawning too many workers for the domain components.
 
 - Day 9 and 10 were spent reviewing the acceptance test procedure with gitlab pipelines and preparing the Dockerfile configuration (I've always been on github so it was my first with the gitlab plarform).
 
