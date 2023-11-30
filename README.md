@@ -5,7 +5,7 @@ car-pooling-service is a microservice designed to manage car pooling scheduling.
 
 [![Go Report Card](https://goreportcard.com/badge/gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk)](https://goreportcard.com/report/gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk)
 
-[![e2e](https://gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk/badges/main/pipeline.svg)](https://gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk/-/blob/master/.gitlab-ci.yml)
+<!-- [![e2e](https://gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk/badges/main/pipeline.svg)](https://gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk/-/blob/master/.gitlab-ci.yml) -->
 
 <!-- [![test](https://gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk/-/jobs/master/badge.svg)](https://gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk/-/blob/master/.gitlab-ci.yml) -->
 
