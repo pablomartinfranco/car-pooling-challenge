@@ -3,7 +3,7 @@
 **Golang microservice for car pooling management**<br>
 car-pooling-service is a microservice designed to manage car pooling scheduling.
 
-[![Go Report Card](https://goreportcard.com/badge/gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk)](https://goreportcard.com/report/gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pablomartinfranco/car-pooling-challenge)](https://goreportcard.com/report/github.com/pablomartinfranco/car-pooling-challenge)
 
 <!-- [![e2e](https://gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk/badges/main/pipeline.svg)](https://gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk/-/blob/master/.gitlab-ci.yml) -->
 
