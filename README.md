@@ -64,7 +64,7 @@ make dockerize
 
 ### Guides and References
 
-- [Chanllenge requirements](https://gitlab-hiring.cabify.tech/cabify-challenge/car-pooling-challenge-candidate-jAwOTdhODk/-/blob/master/README-challenge.md)
+- [Chanllenge requirements](README-challenge.md)
 
 Web API Specification:
 
