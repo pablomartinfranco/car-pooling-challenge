@@ -156,11 +156,11 @@ This way the solution lets you test and try different worker amount combination 
 
 ## Development process
 
-- The whole solution took around 15 days of 4 to 6 hours work each.
+- The whole solution took around 10 days of 1 to 3 hours work each.
 
 - I decided to use the Golang technology because of the nice balance between static code analisys, garbage collection and close to the metal performance that Golang offers (and the inbuilt multithread non-blocking async I/O support).
 
-- First 2 days were spent getting used to Golang tool chain, because it's been some time since the last project built with the Golang technology and all.
+- First 2 days were spent getting used to Golang tool chain, because it's been some time since the last project I've built with the Golang technology and all.
 
 - Day 3, conceptualization of the general solution taking in consideration the advantages and benefits of Golang goroutines and garbage collection.
 
@@ -168,9 +168,9 @@ This way the solution lets you test and try different worker amount combination 
 
 - By day 8 I've got a working implementation although with some race condition issues when spawning too many workers for the domain components.
 
-- Day 9 and 10 were spent reviewing the acceptance test procedure with gitlab pipelines and preparing the Dockerfile configuration (I've always been on github so it was my first with the gitlab plarform).
+- Day 9 and 10 were spent reviewing the acceptance test procedure with gitlab pipelines and preparing the Dockerfile configuration (I've always been on github so it was my first time using the gitlab plarform).
 
-- Day 11 onwards were spent solving race condition issues with the help of Golang race detection and with stress tests with locust. This took me a while.
+- Day 11 onwards were spent solving race condition issues with the help of Golang race detection and with locust stress tests. This took me a while.
 
 - The making of this documentation also required time here and there.
 Still pending the addition of open api documentation with swagger.
@@ -335,4 +335,4 @@ After having analized the stress test results of this project I would like to im
 
 The syncrhonized queues seemed a good idea for the scaling of tasks that could become demanding in the future and for fault tolerance reasons, but at the present state of the project it could have been a little bit of premature optimization. I like playing with queues.
 
-Another aproach could have been using Golang channels instead of blocking queues, this way It could have been less troublesome to synchronize the workers, taking in consideration that channels are almost always designed with concurrency in mind. But like I was not familiar with Golang channels at the start of this project, I decided to synchronize the workers myself. I have read bad things about using channels as a FIFO structure for solving concurrency problems between threads
+Another aproach could have been using Golang channels instead of blocking queues, this way It could have been less troublesome to synchronize the workers, taking in consideration that channels are almost always designed with concurrency in mind. But like I wanted to show some operative systems knowledge, I decided to synchronize the workers myself. I have read some concerning potential issues about using channels as a FIFO structure for solving concurrency problems between threads, so one should be careful and test the processes with multiple stress tests looking for rece conditions.
