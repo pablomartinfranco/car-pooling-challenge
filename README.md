@@ -147,7 +147,7 @@ Special care was dedicated towards making sure the solution is thread safe, util
 ## Solution design
 
 The car pooling solution consists of a Golang containerized microservice.
-The general idea was to create a producer, consumer architecture using goroutines and making use of the non-blocking green threads scheduling that comes inbuilt with Golang and the standard library
+The general idea was to create a producer, consumer architecture using goroutines and making use of the non-blocking green threads scheduling that comes inbuilt with Golang and the standard library.
 
 Goroutines utilizes green threads over preallocated kernel threads, making posible to support multithreading and at the same time reduce context switch overhead.
 Producer, consumer architecture makes it posible to scale the service quota according
