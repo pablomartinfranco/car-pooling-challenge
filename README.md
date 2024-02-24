@@ -140,7 +140,7 @@ The project is structured with ideas from Clean Architecture, and Domain Driven 
 
 Use Cases are represented through handlers slightly coupled to the web server request/response objects.
 
-Regarding to tests, unit tests should be enforced at domain entity level, and integration tests at the use case level (handlers). Mocks must be created for every entity methods and handlers so that tests don't rely on imported packages.
+Regarding to tests, unit tests should be enforced at domain entity level, and integration tests at the use case level (handlers). Dependency objects should be mocked for decoupling tests from dependency implementations.
 
 Special care was dedicated towards making sure the solution is thread safe, utilizing synchronized data structures with semaphores and channels.
 
