@@ -160,7 +160,7 @@ This way the solution lets you test and try different worker amount combination 
 
 - I decided to use the Golang technology because of the nice balance between static code analisys, garbage collection and close to the metal performance that Golang offers (and the inbuilt multithread non-blocking async I/O support).
 
-- First 2 days were spent getting used to Golang tool chain, because it's been some time since the last project I've built with the Golang technology and all.
+- First 2 days were spent getting used to Golang tool chain, because it's been some time since the last project I've built with the Golang tool chain and all.
 
 - Day 3, conceptualization of the general solution taking in consideration the advantages and benefits of Golang goroutines and garbage collection.
 
