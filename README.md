@@ -321,13 +321,13 @@ In the CPU monitor of the host machine there seems to be a lot of kernel activit
 
 The locust server was using 600Mb of RAM (Python process is heavy) and the Golang application allocated around 100Mb of RAM.
 
-In the final test, with the described amount of resources, the quality of service reached saturation at 2000 request per second. Under the same resources conditions I've done tests with similar producer consumer backend applications, in Node (Express) and Python (FastAPI), reaching a limit of 800 to 900 requests per second and spending at least double the amount of RAM with only single thread async I/O support.
+In the final test, with the described amount of resources, the quality of service reached saturation at 2000 request per second. Under the same resources conditions I've done tests with similar producer consumer backend applications, in Node.js (Express) and Python (FastAPI), reaching a limit of 800 to 900 requests per second and spending at least double the amount of RAM with single thread event loop async I/O support.
 
 PD: I have noticed that when the index of journeys grows bigger than 5000 the car scheduling process becomes considerably slower. I really doubt the problem being the journeys hashmap, I'm more inclined to suspect of the free seats array of hashmaps. It could also be a problem with the constant mutual exclution between data structures. Right now all the mutex semaphores doesn't discriminate from read or write, maybe that is another optimization that could help. More research should be done here and try with better specialized data structures.
 
 ## Future considerations
 
-It would be interesting to compare this project with similar implementations done with Node, Python and Java or netCore.
+It would be interesting to compare this project with similar implementations done with Node.js, Python and Java or netCore.
 
 The safe array implementation under pkg folder needs to be reviewed cause it is using slices under the hood and I'm not quite sure if an update of the inner structures is generating copies of the slices or if it is passing the referece. By all the testing done it seems to be working right under high concurrency scenarios but I wpuld like to do some more testing.
 
