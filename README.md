@@ -319,7 +319,7 @@ Observing the test results for the different worker configurations, the applicat
 
 In the CPU monitor of the host machine there seems to be a lot of kernel activity. This could be attributed to OS context switching combined with the WSL virtualization overhead, I/O operations between Golang preallocated threads or it could even be garbage collection activity that Golang schedules in multiple threads. Maybe limiting the GOMAXPROCS number of preallocated OS threads to a low number, let's say 2 or 3, will help reduce this overhead. Goroutines green threads run over this preallocated kernel threads but are scheduled internaly by software so there is no need for that many KLTs, those could run even over a single thread for what I know, limiting the parallel programming capabilities but still being able to schedule tasks in a non blocking way, making good use of the time shared resources. One downside of limiting GOMAXPROCS is that it could impact the garbage collection threads as well, degrading the memory management capabilities.
 
-The locust server was using 600Mb of RAM (Python process everybody) and the Golang application allocated around 100Mb of RAM.
+The locust server was using 600Mb of RAM (Python process is heavy) and the Golang application allocated around 100Mb of RAM.
 
 In the final test, with the described amount of resources, the quality of service reached saturation at 2000 request per second. Under the same resources conditions I've done tests with similar producer consumer backend applications, in Node (Express) and Python (FastAPI), reaching a limit of 800 to 900 requests per second and spending at least double the amount of RAM with only single thread async I/O support.
 
