@@ -256,7 +256,7 @@ In the future it would be nice to use the Golang implementation of locust instea
 
 ### Hardware setup
 
-Guest machine (Ubuntu WSL2)
+Guest machine (Ubuntu WSL1)
 
 ![cpu_mem.jpg](docs/img/cpu_mem.jpg)
 
@@ -317,7 +317,7 @@ Host machine (Windows 10)
 
 Observing the test results for the different worker configurations, the application doesn't seem to show a significative improvement in the quality of service or at resource consumption level.
 
-In the CPU monitor of the host machine there seems to be a lot of kernel activity. This could be attributed to OS context switching combined with the WSL virtualization overhead, I/O operations between Golang preallocated threads or it could even be garbage collection activity that Golang schedules in multiple threads. Maybe limiting the GOMAXPROCS number of preallocated OS threads to a low number, let's say 1 or 2, will help reduce this overhead. Goroutines green threads run over this preallocated kernel threads but are scheduled internaly by software so there is no need for that many KLTs, those could run even over a single thread for what I know, limiting the parallel programming capabilities but still being able to schedule tasks in a non blocking way, making good use of the time shared resources like in Node. One downside of limiting GOMAXPROCS is that it could impact the garbage collection threads as well, degrading the memory management capabilities.
+In the CPU monitor of the host machine there seems to be a lot of kernel activity. This could be attributed to OS context switching combined with the WSL virtualization overhead, I/O operations between Golang preallocated threads or it could even be garbage collection activity that Golang schedules in multiple threads. Maybe limiting the GOMAXPROCS number of preallocated OS threads to a low number, let's say 2 or 3, will help reduce this overhead. Goroutines green threads run over this preallocated kernel threads but are scheduled internaly by software so there is no need for that many KLTs, those could run even over a single thread for what I know, limiting the parallel programming capabilities but still being able to schedule tasks in a non blocking way, making good use of the time shared resources. One downside of limiting GOMAXPROCS is that it could impact the garbage collection threads as well, degrading the memory management capabilities.
 
 The locust server was using 600Mb of RAM (Python process everybody) and the Golang application allocated around 100Mb of RAM.
 
